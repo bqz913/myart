@@ -19,7 +19,7 @@ class Objnikoniko{
     ellipse(xpos - size/6, ypos - size/6, size/15, size/6);
     ellipse(xpos + size/6, ypos - size/6, size/15, size/6);
 
-    strokeWeight(size/10);
+    strokeWeight(3);
     noFill();
     arc(xpos, ypos + size/6, size/2, size/3, PI/100, PI*99/100);
   }
