@@ -27,16 +27,16 @@ void setup(){
 void draw(){
   background(255);
   nikoniko.rotation(nikoniko_point.loc(0), nikoniko_point.loc(1), 0.05);
-  nikoniko_point.linear(PI/10, 0.5);
+  nikoniko_point.linear(PI/10, 1);
   nikoniko.disp();
     
   nikoniko2.rotation(nikoniko2_point.loc(0), nikoniko2_point.loc(1), 0.5);
   nikoniko2_point.rotation(200, 200, 0.05);
   nikoniko2.disp();
   
-  //saveFrame("frames//####.png");
+  saveFrame("frames//####.png");
   roop++;
-  //if(2*PI/0.05 < roop) exit();
+  if(roop == 1000) exit();
   
 }
 
