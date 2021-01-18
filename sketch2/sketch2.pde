@@ -1,5 +1,5 @@
 int FR = 50;    // フレームレート
-int roop_last = 5000;  // ループ合計回数
+int roop_last = 1000;  // ループ合計回数
 float release_freq = 5; // 増殖の頻度(s/FR)
 int nikoniko_count = 0; //Objnikonikoの数の初期値
 Objnikoniko[] nikoniko_array = new Objnikoniko[roop_last];
@@ -10,7 +10,7 @@ float sec;
 void setup(){
 
   size(500, 500);
-  background(255);
+  background(0);
   frameRate(FR);
   // holeの初期座標
   float[] hole_initpos = {200, 200};
@@ -21,13 +21,16 @@ void setup(){
 
 void draw(){
 
-  background(255);
+  background(0);
   hole.rotation(300, 300, 0.05);  
+  
+  // 増殖
   if(roop % release_freq == 0){
     nikoniko_array[nikoniko_count] = hole.release(random(10, 65));
     nikoniko_count++;
-    println(nikoniko_count);
   }
+  
+  // nikoniko表示
   for(int i=0; i<nikoniko_count; i++){
       nikoniko_array[i].linear(random(0, 100) * 2*PI/100, random(1, 2));
       nikoniko_array[i].rotation(random(width), random(height), random(1, 10)*0.01);
@@ -35,7 +38,7 @@ void draw(){
   }
   
   hole.disp();  
-  //saveFrame("frames//####.png");
+  saveFrame("frames//####.png");
   roop++;
   if(roop == 1000) exit();
   

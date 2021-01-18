@@ -1,5 +1,6 @@
 import glob
 from PIL import Image
+import os
 
 def mkgif(name):
     files = glob.glob(f'{name}/*.png')

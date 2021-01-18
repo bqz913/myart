@@ -54,7 +54,13 @@ class Objhole{
   void disp(){
     fill(0, 0, 0);
     circle(xpos, ypos, size);
-    for(int i = 0; i < 20; i++){
+    for(int i = 0; i < 10; i++){
+      int c = 0 + i * (255/10);
+      stroke(c);
+      noFill();
+      circle(xpos, ypos, size - i);
+    }
+    for(int i = 10; i < 20; i++){
       int c = 255 - i * (255/20);
       stroke(c);
       noFill();
