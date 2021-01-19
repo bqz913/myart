@@ -1,5 +1,5 @@
 int FR = 50;    // フレームレート
-int roop_last = 1000;  // ループ合計回数
+int roop_last = 500;  // ループ合計回数
 int roop = 0;    // ループ回数
 int img_count = 0;  // イメージの個数
 float release_freq = 1; // 増殖の頻度(s/FR)
